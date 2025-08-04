@@ -1,0 +1,587 @@
+{
+	"info": {
+		"_postman_id": "8d9649c8-20b7-4f2c-be70-ceb44aac649c",
+		"name": "Public API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7267571",
+		"_collection_link": "https://easycruit.postman.co/workspace/3aa8f0ac-0e60-4c67-8e5e-b67be51edb2a/collection/7267571-8d9649c8-20b7-4f2c-be70-ceb44aac649c?action=share&source=collection_link&creator=7267571"
+	},
+	"item": [
+		{
+			"name": "Reporting",
+			"item": [
+				{
+					"name": "Get application report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ApiToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Report_AcceptHeader}}"
+							}
+						],
+						"url": {
+							"raw": "{{EasyCruit_BaseUrl}}/api/reporting/v1/data-extract/tenants/{{TenantId}}/applications?fromDate=2025-01-13&toDate=2025-05-13&departments=4693&departments=74333&locale=en-US",
+							"host": [
+								"{{EasyCruit_BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"reporting",
+								"v1",
+								"data-extract",
+								"tenants",
+								"{{TenantId}}",
+								"applications"
+							],
+							"query": [
+								{
+									"key": "fromDate",
+									"value": "2025-01-13"
+								},
+								{
+									"key": "toDate",
+									"value": "2025-05-13"
+								},
+								{
+									"key": "departments",
+									"value": "4693"
+								},
+								{
+									"key": "departments",
+									"value": "74333"
+								},
+								{
+									"key": "locale",
+									"value": "en-US"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get vacancy report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ApiToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Report_AcceptHeader}}"
+							}
+						],
+						"url": {
+							"raw": "{{EasyCruit_BaseUrl}}/api/reporting/v1/data-extract/tenants/{{TenantId}}/vacancies?fromDate=2025-01-13&toDate=2025-05-13&departments=4693&departments=74333&locale=en-US",
+							"host": [
+								"{{EasyCruit_BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"reporting",
+								"v1",
+								"data-extract",
+								"tenants",
+								"{{TenantId}}",
+								"vacancies"
+							],
+							"query": [
+								{
+									"key": "fromDate",
+									"value": "2025-01-13"
+								},
+								{
+									"key": "toDate",
+									"value": "2025-05-13"
+								},
+								{
+									"key": "departments",
+									"value": "4693"
+								},
+								{
+									"key": "departments",
+									"value": "74333"
+								},
+								{
+									"key": "locale",
+									"value": "en-US"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get job alert report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ApiToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Report_AcceptHeader}}"
+							}
+						],
+						"url": {
+							"raw": "{{EasyCruit_BaseUrl}}/api/reporting/v1/data-extract/tenants/{{TenantId}}/job-alerts?fromDate=2024-08-13&toDate=2025-07-13&locale=en-US",
+							"host": [
+								"{{EasyCruit_BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"reporting",
+								"v1",
+								"data-extract",
+								"tenants",
+								"{{TenantId}}",
+								"job-alerts"
+							],
+							"query": [
+								{
+									"key": "fromDate",
+									"value": "2024-08-13"
+								},
+								{
+									"key": "toDate",
+									"value": "2025-07-13"
+								},
+								{
+									"key": "locale",
+									"value": "en-US"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get vacancy specific question report",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ApiToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Report_AcceptHeader}}"
+							}
+						],
+						"url": {
+							"raw": "{{EasyCruit_BaseUrl}}/api/reporting/v1/data-extract/tenants/{{TenantId}}/vacancy-specific-questions?vacancyId=1785273&locale=en-US",
+							"host": [
+								"{{EasyCruit_BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"reporting",
+								"v1",
+								"data-extract",
+								"tenants",
+								"{{TenantId}}",
+								"vacancy-specific-questions"
+							],
+							"query": [
+								{
+									"key": "vacancyId",
+									"value": "1785273"
+								},
+								{
+									"key": "locale",
+									"value": "en-US"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ApiToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Report_AcceptHeader}}"
+							}
+						],
+						"url": {
+							"raw": "{{EasyCruit_BaseUrl}}/api/reporting/v1/data-extract/tenants/{{TenantId}}/users?fromDate=2025-01-13&toDate=2025-05-13&departments=4693&departments=74333&locale=en-US",
+							"host": [
+								"{{EasyCruit_BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"reporting",
+								"v1",
+								"data-extract",
+								"tenants",
+								"{{TenantId}}",
+								"users"
+							],
+							"query": [
+								{
+									"key": "fromDate",
+									"value": "2025-01-13"
+								},
+								{
+									"key": "toDate",
+									"value": "2025-05-13"
+								},
+								{
+									"key": "departments",
+									"value": "4693"
+								},
+								{
+									"key": "departments",
+									"value": "74333"
+								},
+								{
+									"key": "locale",
+									"value": "en-US"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get candidate question report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ApiToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Report_AcceptHeader}}"
+							}
+						],
+						"url": {
+							"raw": "{{EasyCruit_BaseUrl}}/api/reporting/v1/data-extract/tenants/{{TenantId}}/candidate-questions?fromDate=2025-01-13&toDate=2025-05-13&locale=en-US",
+							"host": [
+								"{{EasyCruit_BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"reporting",
+								"v1",
+								"data-extract",
+								"tenants",
+								"{{TenantId}}",
+								"candidate-questions"
+							],
+							"query": [
+								{
+									"key": "fromDate",
+									"value": "2025-01-13"
+								},
+								{
+									"key": "toDate",
+									"value": "2025-05-13"
+								},
+								{
+									"key": "locale",
+									"value": "en-US"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get posting channel report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ApiToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Report_AcceptHeader}}"
+							}
+						],
+						"url": {
+							"raw": "{{EasyCruit_BaseUrl}}/api/reporting/v1/data-extract/tenants/{{TenantId}}/posting-channels?fromDate=2025-01-13&toDate=2025-05-13&departments=4693&departments=74333&locale=en-US",
+							"host": [
+								"{{EasyCruit_BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"reporting",
+								"v1",
+								"data-extract",
+								"tenants",
+								"{{TenantId}}",
+								"posting-channels"
+							],
+							"query": [
+								{
+									"key": "fromDate",
+									"value": "2025-01-13"
+								},
+								{
+									"key": "toDate",
+									"value": "2025-05-13"
+								},
+								{
+									"key": "departments",
+									"value": "4693"
+								},
+								{
+									"key": "departments",
+									"value": "74333"
+								},
+								{
+									"key": "locale",
+									"value": "en-US"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get application question report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{ApiToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Report_AcceptHeader}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{EasyCruit_BaseUrl}}/api/reporting/v1/data-extract/tenants/{{TenantId}}/application-questions?fromDate=2025-01-13&toDate=2025-05-13&departments=4693&departments=74333&locale=en-US",
+							"host": [
+								"{{EasyCruit_BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"reporting",
+								"v1",
+								"data-extract",
+								"tenants",
+								"{{TenantId}}",
+								"application-questions"
+							],
+							"query": [
+								{
+									"key": "fromDate",
+									"value": "2025-01-13"
+								},
+								{
+									"key": "toDate",
+									"value": "2025-05-13"
+								},
+								{
+									"key": "departments",
+									"value": "4693"
+								},
+								{
+									"key": "departments",
+									"value": "74333"
+								},
+								{
+									"key": "locale",
+									"value": "en-US"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get AccessToken from Visma Connect",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseJson = pm.response.json();",
+							"const accessToken = responseJson.access_token;",
+							"",
+							"if (accessToken) {",
+							"    pm.collectionVariables.set(\"ApiToken\", accessToken);",
+							"    console.log(\"Access token stored in collection variable 'ApiToken'\");",
+							"} else {",
+							"    console.error(\"Access token not found in response\");",
+							"}",
+							"",
+							"pm.test(\"Token request successful\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "your-client-id",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "your-client-secret",
+							"type": "text"
+						},
+						{
+							"key": "tenant_id",
+							"value": "your-tenant-id",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "easycruit-public-api-int-test:reporting:read",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{Connect_TokenUrl}}",
+					"host": [
+						"{{Connect_TokenUrl}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "TenantId",
+			"value": "230",
+			"type": "string"
+		},
+		{
+			"key": "Report_AcceptHeader",
+			"value": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+			"type": "default"
+		},
+		{
+			"key": "ApiToken",
+			"value": ""
+		}
+	]
+}
