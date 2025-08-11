@@ -478,6 +478,105 @@
 			]
 		},
 		{
+			"name": "Language",
+			"item": [
+				{
+					"name": "Get countries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{EasyCruit_BaseUrl}}/api/language/v1/countries?locale=en-GB",
+							"host": [
+								"{{EasyCruit_BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"language",
+								"v1",
+								"countries"
+							],
+							"query": [
+								{
+									"key": "locale",
+									"value": "en-GB"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get counties",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{EasyCruit_BaseUrl}}/api/language/v1/countries/160/counties",
+							"host": [
+								"{{EasyCruit_BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"language",
+								"v1",
+								"countries",
+								"160",
+								"counties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get municipalities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{EasyCruit_BaseUrl}}/api/language/v1/countries/160/counties/1181/municipalities",
+							"host": [
+								"{{EasyCruit_BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"language",
+								"v1",
+								"countries",
+								"160",
+								"counties",
+								"1181",
+								"municipalities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get translations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{EasyCruit_BaseUrl}}/api/v2/languages/translations/en-GB/portal",
+							"host": [
+								"{{EasyCruit_BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"languages",
+								"translations",
+								"en-GB",
+								"portal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Get AccessToken from Visma Connect",
 			"event": [
 				{
