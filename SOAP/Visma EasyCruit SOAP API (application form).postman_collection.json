@@ -369,6 +369,33 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Candidate transfer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:urn=\"urn:EasyCruit\">\n   <soapenv:Header>\n      <urn:AuthHeader>\n         <Customer>{{customer}}</Customer>\n         <Username>{{username}}</Username>\n         <Password passwordEncoding=\"plain\">\n            <passwordString>{{password}}</passwordString>\n         </Password>\n      </urn:AuthHeader>\n   </soapenv:Header>\n   <soapenv:Body>\n      <urn:CandidateExport>\n         <urn:CandidateId>{{lastCandidateId}}</urn:CandidateId>\n      </urn:CandidateExport>\n   </soapenv:Body>\n</soapenv:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{domain}}/ws",
+					"protocol": "https",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"ws"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
